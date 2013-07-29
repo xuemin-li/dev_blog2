@@ -1,0 +1,52 @@
+.rotate{
+  width:350px;
+  height:350px;
+  position: relative;
+  margin:40px auto 66px;
+}
+.btn{
+  width:260px;
+  height:70px;
+  margin:0 auto;
+}
+.btn span{
+  cursor:pointer;
+  width:70px;
+  height:70px;
+  float:left;
+  overflow: hidden;
+  margin-right: 10px;
+  line-height: 70px;
+  text-align: center;
+  font-weight: bold;
+  color:#333;
+  font-size: 18px;
+
+}
+#go{
+  background: url(img/rotate1.png) 0 0 no-repeat;
+}
+#stop{
+  background: url(img/rotate1.png) 0 -81px no-repeat;
+}
+#rotate_target{
+  position: absolute;
+  left:0;
+  top:0;
+
+}
+#rotate_pointer{
+  position: absolute;
+  left:140px;
+  top:78px;
+}
+.re-icon{
+  width:80px;
+  height:80px;
+  display: block;
+  text-indent: -10000px;
+  overflow: hidden;
+  float: left;
+  background: url(img/return.gif) 0 0 no-repeat;
+  margin: -10px 0 0 10px;
+} 

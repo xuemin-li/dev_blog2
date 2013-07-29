@@ -74,6 +74,7 @@ body{
   box-shasdow: 0 0 5px rgba(0,0,0,0.3);
 }
 .circle img{
+  height: 64px;
   border-radius: 32px;
 }
 .mod-right{
