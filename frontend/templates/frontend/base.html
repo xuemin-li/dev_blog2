@@ -6,59 +6,13 @@
     <meta name="description" content="{{ config['DESCRIPTION'] }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <title>{% block title %}{% endblock %} - {{ config['MAIN_TITLE'] }}</title>
-    {% if config['DEBUG'] == True %}
-      <link rel=stylesheet type=text/css href="{{ url_for('frontend.static', filename='css/frontend.css') }}">
-    {% else %}
-      <link rel=stylesheet type=text/css href="{{ url_for('frontend.static', filename='css/frontend.min.css') }}">
-    {% endif %}
+    {% block stylesheet %}
+      <link rel=stylesheet type=text/css href="{{ url_for('frontend.static', filename='css/index.css') }}">
+    {% endblock%}
   </head>
   <body>
-    <div id="container">
-      <div id="logo">
-        <a href="/" title="{{ self.title() }}"></a>
-        <p>{{ profile.signature }}</p>
-      </div>
-      <div id="nav">
-        <ul>
-          <li><a href="{{ url_for('frontend.home') }}">Home</a></li>
-          <li><a href="{{ url_for('frontend.gallery') }}">Gallery</a></li>
-          <li><a href="{{ url_for('frontend.rss') }}">RSS</a></li>
-          {% for p in pages %}
-          <li><a href="{{ url_for('frontend.page', page_url=p.url) }}">{{ p.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% block content %}
-      {% endblock %}
-      <div id="sidebar">
-        <h2>SEARCH</h2>
-        <form action="http://google.com/search" method="get" accept-charset="utf-8" id="search_form">
-          <input class="search" type="text" name="q" results="0" autocomplete="true">
-          <input type="hidden" name="q" value="site:{{ config['SITE_URL'] }}">
-        </form>
-        <br />
-        <h2>ARCHIVES</h2>
-        <ul id="side-cats">
-          {% for c in categories %}
-          <li class="cat-item"><a href="{{ url_for('frontend.category_list', category_id=c.id, category_name=c.name) }}" title="{{ c.name }}">{{ c.name }}({{ c.diaries|count }})</a></li>
-          {% endfor %}
-        </ul>
-        <h2>LINKS</h2>
-        <ul class="recent-comments">
-          <li><a href="http://xsky.me/" title="空の領域" target="_blank">空の領域</a>: 小天的博客...坑爹女一枚...</li>
-          <li><a href="http://www.youmeek.com/" title="YouMeek" target="_blank">YouMeek</a>: Judas.n的博客...低调男一枚...</li>
-          <li><a href="mailto:he.kang@dev-engine.com" title="交换链接">交换链接</a>: 交换链接可以给我邮件...博客收入现已均衡...谢绝下三烂的广告提供...</li>
-        </ul>
-        <h2>OPEN SOURSE</h2>
-        <ul class="opensourse">
-          <li><a href="https://github.com/ScenK/dev_blog2/" target="_blank" title="博客Github开源代码">Github</a>: 博客Github开源代码</li>
-        </ul>
-      </div>
-    </div>
-    <footer>
-    &copy; <a href="mailto:he.kang@dev-engine.com">Dev-engine</a>  |  Powered By Flask, Tornado and MongoDB
-    </footer>
-    {% block script %}{% endblock %}
+    {% block content %}
+    {% endblock %}
     {% if config['DEBUG'] == True %}
       <script type="text/javascript" src="{{ url_for('frontend.static', filename='js/frontend.js') }}"></script>
     {% else %}
