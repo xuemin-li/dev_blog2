@@ -40,7 +40,6 @@ def compress():
 def compress_all_js():
     compress_js('admin/static', 'backend')
     compress_js('static', 'frontend')
-    compress_js('static', '404')
 
 @task
 def compress_js(folder, debug_files):
@@ -64,7 +63,7 @@ def compress_js(folder, debug_files):
 
 @task
 def compress_css():
-    css_files = ['frontend', '404']
+    css_files = ['frontend']
 
     local("rm -f static/css/*.min*.css")
 
@@ -82,7 +81,6 @@ def compress_css():
 @task
 def lessc():
     local("lessc static/less/frontend.less > static/css/frontend.css")
-    local("lessc static/less/404.less > static/css/404.css")
 
 
 @task
