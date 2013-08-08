@@ -63,14 +63,6 @@ def compress_js(folder, debug_files):
 
 @task
 def compress_css():
-    css_files = ['frontend']
-
-    local("rm -f static/css/*.min*.css")
-
-    for f in css_files:
-        local(
-            'java -jar yuicompressor.jar --charset utf-8 --type css %s >> %s' %
-            ('static/css/'+f+'.css', 'static/css/'+f+'.min.css'))
 
     local("rm -f admin/static/css/admn.min.css")
 
