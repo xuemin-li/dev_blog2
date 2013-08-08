@@ -64,13 +64,13 @@ var Tools = {
 
   buildCommentHtml: function (name, time, content) {
     var html="";
-    html += '<small class="commentmetadata"><a>' +
+    html += '<span class="critime">' +
             time +
-            '</a></small><cite>' +
+            '</span><cite>' +
             name +
-            '<span>:</span></cite><div class="comment-content"><p>' +
+            '</cite><p>' +
             content +
-            '</p></div>';
+            '</p>';
     return html;
   }
 }

@@ -60,24 +60,25 @@
           </li>
           {% endfor %}
         </ul>
-        <form action="" method="" id="comment">
+        <form id="comment">
+            <input type="hidden" id="did" value="{{ diary.id }}"/>
           <p>
-            <input id="author" type="text" tabindex="1" size="22" value="" name="author" />
-            <label for="author">
+            <input type="text" tabindex="1" size="22" value="" class="username" />
+            <label>
               <span>称呼 (必填)</span>
             </label>
           </p>
           <p>
-            <input id="author" type="text" tabindex="1" size="22" value="" name="mail" />
-            <label for="author">
+            <input type="text" tabindex="1" size="22" value="" class="email" />
+            <label >
               <span> 邮箱 (用于接收回复邮件) (必填)</span>
             </label>
           </p>
           <p>
-            <textarea name="comment" cols="60%" rows="5" tabindex="4" class="com-text" value="请填写内容"></textarea>
+            <textarea cols="60%" rows="5" tabindex="4" class="com-text comment" value="请填写内容"></textarea>
           </p>
           <p>
-            <input class="submit-sty" type="submit" value="提交"/>
+            <input class="submit-sty" id="comment_add_form_btn" type="button" value="提交"/>
           </p>
         </form>
         

@@ -328,4 +328,8 @@ body{
   margin-top: 25px;
 }
 
+.error {
+  background: #f8dbdb !important;
+  border-color: #e77776 !important;
+}
 

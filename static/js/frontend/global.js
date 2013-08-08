@@ -3,7 +3,7 @@
   // Comment Add Check
   $(document).on('click', '#comment_add_form_btn', function(){
     var self = $(this);
-    var u_form = $('#comment_add_form'),
+    var u_form = $('#comment'),
         u_name = u_form.find('.username'),
         u_email = u_form.find('.email'),
         u_comment = u_form.find('.comment');
@@ -36,7 +36,7 @@
         });
         var time = Tools.getTime();
         var html = Tools.buildCommentHtml(name, time, comment);
-        $('<li class="alt new-comment"></li>').appendTo('.commentlist');
+        $('<li class="visitor new-comment"></li>').appendTo('.critic');
         $('body').animate({ scrollTop: $('.new-comment:last-child').offset().top - 200}, 900);
         $('.new-comment:last-child').hide().append(html).fadeIn(4000);
         u_comment.val('');
