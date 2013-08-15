@@ -34,7 +34,7 @@ body{
   font-family: Helvetica,arial,sans-serif;
   font-size: 13px;
   color:#333;
-  background:url(../img/bg.jpg) center 0 repeat-y fixed;
+  background:url(../img/bg.jpg?v=2) center 0 repeat-y fixed;
 }
 .p{
   position: relative;

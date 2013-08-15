@@ -42,7 +42,7 @@ body{
   font-size: 13px;
   color:#333;
   margin-top:-100px;
-  background:url(../img/bg.jpg) center 0 repeat-y fixed;
+  background:url(../img/bg?v=2.jpg) center 0 repeat-y fixed;
 }
 .p{
   position: relative;
