@@ -25,6 +25,7 @@
         │   │   └── admin
         ├── fabfile
         │   ├── __init__.py                       集成发布Fabric命令
+        │   ├── redirector.py                     301跳转文件生成器
         │   └── dbmover.py                        博客版本数据库迁移助手
         ├── frontend                              前端Blueprint
         │   ├── __init__.py
@@ -54,6 +55,7 @@
             ├── helper                            助手文件夹
             │   ├── __init__.py
             │   ├── html_helper.py                html处理助手
+            │   ├── re_helper.py                  正则表达式过滤助手
             │   └── upyun_helper.py               又拍云图片上传助手
             └── upyun.py                          又拍云SDK(v1.0)
 
@@ -117,4 +119,8 @@
     * 遵循已有代码风格和文件夹风格 欢迎提pull request
     * MIT License.
 
++ 已知同项目, 不同前端风格的网站征集展示:
+
+    * 自由&宁静的web前端博客: <http://bo.tuzii.me>
+    
 *Do it yourself and make joy :)*
