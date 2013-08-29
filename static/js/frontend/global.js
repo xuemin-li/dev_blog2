@@ -46,26 +46,11 @@
       }
   });
 
-  $(window).on('scroll', function () {
-    var top = $("#back_to_top").offset();
-    try{
-      top.top > 1000 ? $('#back_to_top').removeClass('hide') : $('#back_to_top').addClass('hide'); 
-    }catch(err){}
-  });
-
   $(document).on('click', '#back_to_top', function() {
     $('body').animate({ scrollTop: $('#nav').offset().top }, 200);
   });
 
   $(document).ready(function() {
-    // gallery page funciton
-    $(window).load(function() {
-      $('#colum-container').BlocksIt({
-        numOfCol: 2,
-        offsetX: 8,
-        offsetY: 8
-      });
-    });
 
     // load code prettyprint
     if($('code').length>0){
